@@ -37,79 +37,103 @@
         html, body {
             overscroll-behavior: none;
         }
-        /* RIGHT CIRCLE */
-        .circle-nav,
-        .circle-page {
-            position: fixed;
-            width: 620px;
-            height: 620px;
-            top: -180px;
-            right: -160px;
-            border-radius: 50%;
-            background: radial-gradient(
-                circle at 50% 50%,
-                #C2168F 0%,
-                #C2168F 52%,
-                rgba(230, 100, 200, 0.55) 52%,
-                rgba(230, 100, 200, 0.55) 100%
-            );
-            pointer-events: none;
-        }
-        .circle-nav {
-            position: fixed;
-            width: 620px;
-            height: 620px;
-            top: -180px;
-            right: -160px;
-            border-radius: 50%;
-            background: radial-gradient(
-                circle at 50% 50%,
-                #C2168F 0%,
-                #be519d 52%,
-                rgba(241, 152, 241, 0.55) 52%,
-                rgba(230, 100, 200, 0.55) 100%
-            );
-            clip-path: inset(180px 0 375px 0);
-            pointer-events: none;
-            z-index: 7;
-        }
-        .circle-page {
-            position: fixed;
-            width: 620px;
-            height: 620px;
-            top: -180px;
-            right: -160px;
-            border-radius: 50%;
-            background: radial-gradient(
-                circle at 50% 50%,
-                #C2168F 0%,
-                #be519d 52%,
-                rgba(241, 152, 241, 0.55) 52%,
-                rgba(230, 100, 200, 0.55) 100%
-            );
-            clip-path: inset(245px 0 0 0);
-            pointer-events: none;
-            z-index: 1;
-        }
-        /* LEFT-BOTTOM CIRCLE */
-        body::after {
-            content: "";
-            position: fixed;
-            border-radius: 50%;
-            pointer-events: none;
-            width: 460px;
-            height: 460px;
-            bottom: -140px;
-            left: -120px;
-            background: radial-gradient(
-                circle at 50% 50%,
-                #C2168F 0%,
-                #be519d 52%,
-                rgba(241, 152, 241, 0.55) 52%,
-                rgba(230, 100, 200, 0.55) 100%
-            );
-            z-index: 3;
-        }
+/* RIGHT CIRCLE */
+.circle-nav,
+.circle-page {
+    position: fixed;
+    width: 620px;
+    height: 620px;
+    top: -180px;
+    right: -160px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle at 50% 50%,
+        #C2168F 0%,
+        #C2168F 52%,
+        rgba(230, 100, 200, 0.55) 52%,
+        rgba(230, 100, 200, 0.55) 100%
+    );
+
+    pointer-events: none;
+}
+
+.circle-nav {
+    position: fixed;
+
+    width: 620px;
+    height: 620px;
+    top: -180px;
+    right: -160px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle at 50% 50%,
+        #C2168F 0%,
+        #be519d 52%,
+        rgba(241, 152, 241, 0.55) 52%,
+        rgba(230, 100, 200, 0.55) 100%
+    );
+
+    clip-path: inset(
+        180px 0 375px 0
+    );
+
+    pointer-events: none;
+    z-index: 7;
+}
+
+.circle-page {
+    position: fixed;
+
+    width: 620px;
+    height: 620px;
+    top: -180px;
+    right: -160px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle at 50% 50%,
+        #C2168F 0%,
+        #be519d 52%,
+        rgba(241, 152, 241, 0.55) 52%,
+        rgba(230, 100, 200, 0.55) 100%
+    );
+
+    clip-path: inset(
+        245px 0 0 0
+    );
+
+    pointer-events: none;
+    z-index: 1;
+}
+/* LEFT-BOTTOM CIRCLE */
+body::after {
+    content: "";
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+}
+body::after {
+    width: 460px;
+    height: 460px;
+    bottom: -140px;
+    left: -120px;
+
+    background: radial-gradient(
+        circle at 50% 50%,
+         #C2168F 0%,
+        #be519d 52%,
+        rgba(241, 152, 241, 0.55) 52%,
+        rgba(230, 100, 200, 0.55) 100%
+    );
+
+    z-index: 3;
+}
+
         /* === TOP NAVIGATION === */
         .bg-bar {
             position: fixed;
@@ -117,6 +141,7 @@
             left: 0;
             width: 100%;
             height: 65px;
+
             background: linear-gradient(
                 100deg,
                 #6B0A63 0%,
@@ -125,6 +150,7 @@
                 #f9a9e0 65%,
                 #FA97DD 100%
             );
+
             z-index: 6;
         }
         .bar-shadow {
@@ -133,11 +159,13 @@
             left: 0;
             width: 100%;
             height: 20px;
+
             background: linear-gradient(
                 180deg,
                 rgba(0,0,0,0.28),
                 rgba(0,0,0,0) 70%
             );
+
             filter: blur(2px);
             pointer-events: none;
             z-index: 5;
@@ -149,12 +177,16 @@
             width: 100%;
             height: 65px;
             padding: 0.8rem 2rem;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             background: transparent;
+
             z-index: 8;
         }
+
         .top-nav .logo {
             font-family: 'Poppins', 'Segoe UI', sans-serif;
             font-size: 1.3rem;
@@ -164,12 +196,14 @@
             color: #FFFFFF;
             text-shadow: 0 1px 3px rgba(0,0,0,0.25);
         }
+
         .nav-buttons {
             display: flex;
             align-items: center;
             gap: clamp(10.8rem, 3vw, 2.5rem);
             flex-wrap: nowrap;
         }
+
         .nav-link {
             font-family: 'Playfair Display', serif;
             font-size: clamp(0.75rem, 1.6vw, 1rem);
@@ -183,7 +217,9 @@
             transition: opacity 0.2s ease;
             white-space: nowrap;
         }
+
         .nav-link:hover { opacity: 0.75; }
+
         .nav-link.active {
             background: linear-gradient(90deg, #C2158F, #F13BA8);
             color: #FFFFFF;
@@ -199,7 +235,10 @@
             position: relative;
             z-index: 4;
         }
-        .page.active { display: block; }
+
+        .page.active {
+            display: block;
+        }
 
         /* === WELCOME PAGE === */
         .welcome-container {
@@ -211,17 +250,20 @@
             text-align: center;
             padding: 3rem 2rem;
         }
+
         .hero-title {
             text-align: center;
             margin-bottom: 1.5rem;
             color: #FFFFFF;
             text-shadow: 0 4px 14px rgba(0,0,0,0.25);
         }
+
         .hero-title .script-letter {
             font-family: 'Alex Brush', cursive;
             font-size: 7rem;
             vertical-align: middle;
         }
+
         .hero-title .caps-word {
             font-family: 'Playfair Display', serif;
             font-size: 3.2rem;
@@ -229,6 +271,7 @@
             text-transform: uppercase;
             vertical-align: middle;
         }
+
         .welcome-container p {
             color: #FFFFFF;
             font-weight: 600;
@@ -289,12 +332,14 @@
             margin: 2rem auto 2.5rem;
             max-width: 640px;
         }
+
         .profile-card {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0;
         }
+
         .profile-photo {
             width: 100px;
             height: 100px;
@@ -303,6 +348,7 @@
             background: linear-gradient(135deg, #C2158F, #F13BA8);
             margin-bottom: 0.7rem;
         }
+
         .profile-photo img {
             width: 100%;
             height: 100%;
@@ -311,6 +357,7 @@
             display: block;
             border: 2px solid #FFFFFF;
         }
+
         .profile-name {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
@@ -320,6 +367,7 @@
             text-align: center;
             line-height: 1.3;
         }
+
         .profile-role {
             font-size: 0.78rem;
             color: rgba(255,255,255,0.85);
@@ -347,6 +395,16 @@
         }
 
         /* === SOLVER PAGE === */
+        h1 {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 0.3rem;
+        }
+        .subtitle {
+            text-align: center;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
         .card {
             background: var(--white);
             max-width: 750px;
@@ -361,11 +419,20 @@
             font-weight: bold;
             margin: 1.2rem 0 0.5rem;
         }
+        input, select {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid var(--pink-dark);
+            border-radius: 10px;
+            font-size: 1rem;
+            background: #FFFAFC;
+        }
         .solver-hero {
             max-width: 700px;
             margin: 0 auto;
             text-align: center;
         }
+
         .solver-title {
             font-family: 'Playfair Display', serif;
             font-style: italic;
@@ -377,7 +444,8 @@
             text-shadow: 0 3px 10px rgba(0,0,0,0.25);
             margin-bottom: 2rem;
         }
-        .pill-input {
+
+        .pill-select, .pill-input {
             width: 100%;
             padding: 1rem 1.5rem;
             border-radius: 999px;
@@ -389,22 +457,53 @@
             background-image: linear-gradient(90deg, #C2158F, #E23FB0);
             margin-bottom: 1.6rem;
             appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            color-scheme: light;
         }
+
+        .pill-select {
+            background-color: #C2158F;
+            background-image:
+                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9'><path d='M1 1l6 6 6-6' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"),
+                linear-gradient(90deg, #C2158F, #E23FB0);
+            background-repeat: no-repeat, no-repeat;
+            background-position: right 1.5rem center, left top;
+            background-size: 14px 9px, 100% 100%;
+            padding-right: 3rem;
+        }
+        .pill-select:hover {
+            background-color: #A01178;
+            background-image:
+                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9'><path d='M1 1l6 6 6-6' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"),
+                linear-gradient(90deg, #A01178, #C2158F);
+            transition: background 0.2s ease;
+        }
+        .pill-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(194, 21, 143, 0.6);
+        }
+
         .pill-input::placeholder { color: rgba(255,255,255,0.8); }
+
         .pill-input:focus {
             outline: none;
             box-shadow: 0 0 0 3px rgba(194, 21, 143, 0.6);
         }
+
         .solve-tagline {
             margin: 2.5rem 0 1.2rem;
             color: #FFFFFF;
             text-shadow: 0 3px 10px rgba(0,0,0,0.25);
         }
+
         .solve-tagline .script-letter {
             font-family: 'Alex Brush', cursive;
             font-size: 3.2rem;
             vertical-align: middle;
         }
+
         .solve-tagline .caps-word {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
@@ -412,6 +511,7 @@
             text-transform: uppercase;
             vertical-align: middle;
         }
+
         .sr-only {
             position: absolute;
             width: 1px; height: 1px;
@@ -512,13 +612,12 @@
             border-radius: 8px;
         }
         .hidden { display: none !important; }
-
-        /* CUSTOM SELECT DROPDOWN */
         .custom-select {
             position: relative;
             width: 100%;
             margin-bottom: 1.6rem;
         }
+
         .custom-select-trigger {
             width: 100%;
             text-align: left;
@@ -539,6 +638,7 @@
             cursor: pointer;
             transition: background 0.2s ease;
         }
+
         .custom-select-trigger:hover,
         .custom-select-trigger:focus {
             background-color: #A01178;
@@ -548,6 +648,7 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(194, 21, 143, 0.6);
         }
+
         .custom-select-options {
             list-style: none;
             position: absolute;
@@ -561,7 +662,9 @@
             z-index: 20;
             display: none;
         }
+
         .custom-select-options.open { display: block; }
+
         .custom-select-options li {
             padding: 0.85rem 1.5rem;
             color: #FFFFFF;
@@ -570,7 +673,10 @@
             cursor: pointer;
             transition: background 0.15s ease;
         }
-        .custom-select-options li:hover { background: #7A0D5C; }
+
+        .custom-select-options li:hover {
+            background: #7A0D5C;
+        }
     </style>
 </head>
 <body>
@@ -598,7 +704,7 @@
             and <strong>accurate number line graphs</strong>!
         </p>
         <p>
-            Supports Linear, Compound, Rational, and Quadratic inequalities.
+            Supports Linear, Compound, Absolute Value, Quadratic, and Cubic inequalities.
             Every answer is shown clearly so you can learn and understand every step.
         </p>
         <button class="start-btn" onclick="showPage('solver')">Start Solving Now</button>
@@ -620,50 +726,54 @@
             with correct brackets, and an accurate number line so you can see exactly
             what the solution looks like.
         </p>
+        <p>
+            Whether you're just learning inequalities or reviewing for exams, this
+            tool is built to help you succeed.
+        </p>
 
         <div class="team-grid">
             <div class="profile-card">
-                <div class="profile-photo"><img src="Alvin.jpg" alt="Member 1"></div>
+                <div class="profile-photo"><img src="Alvin.jpg" alt="Name 1"></div>
                 <div class="profile-name">Alvin Norial</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Angelina.jpg" alt="Member 2"></div>
+                <div class="profile-photo"><img src="Angelina.jpg" alt="Name 2"></div>
                 <div class="profile-name">Angelina Joy Datoon</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Ashley.jpg" alt="Member 3"></div>
+                <div class="profile-photo"><img src="Ashley.jpg" alt="Name 3"></div>
                 <div class="profile-name">Ashley Jade Susal</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Dwane.jpg" alt="Member 4"></div>
+                <div class="profile-photo"><img src="Dwane.png" alt="Name 4"></div>
                 <div class="profile-name">Dwane Micheal Valdez</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Fitz.jpg" alt="Member 5"></div>
+                <div class="profile-photo"><img src="Fitz.jpg" alt="Name 5"></div>
                 <div class="profile-name">Je Fitzrandie Jamona</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Ninia.jpg" alt="Member 6"></div>
+                <div class="profile-photo"><img src="Ninia.jpg" alt="Name 6"></div>
                 <div class="profile-name">Ninia Jean Montuya</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Paul.jpg" alt="Member 7"></div>
+                <div class="profile-photo"><img src="Paul.jpg" alt="Name 7"></div>
                 <div class="profile-name">Pual Andrie Henarios</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Sean.jpg" alt="Member 8"></div>
+                <div class="profile-photo"><img src="Sean.jpg" alt="Name 8"></div>
                 <div class="profile-name">Seankyzer Sayco</div>
                 <div class="profile-role">Member</div>
             </div>
             <div class="profile-card">
-                <div class="profile-photo"><img src="Zich.jpg" alt="Member 9"></div>
+                <div class="profile-photo"><img src="Zich.jpg" alt="Name 9"></div>
                 <div class="profile-name">Zichri James Castulo</div>
                 <div class="profile-role">Member</div>
             </div>
@@ -685,8 +795,9 @@
         <select id="type" style="display:none;">
             <option value="linear">Linear (e.g., 2x + 3 &lt; 7)</option>
             <option value="compound">Compound (e.g., -3 &lt; x + 2 &lt; 5)</option>
+            <option value="absolute">Absolute Value (e.g., |x - 2| &lt;= 4)</option>
             <option value="quadratic">Quadratic (e.g., x^2 - 5x + 6 &gt; 0)</option>
-            <option value="rational">Rational (e.g., (x+1)/(x-3) &lt; 0)</option>
+            <option value="cubic">Cubic / Polynomial (e.g., x^3 - 4x &gt;= 0)</option>
         </select>
 
         <div class="custom-select" id="typeCustom">
@@ -694,8 +805,9 @@
             <ul class="custom-select-options" id="typeOptions">
                 <li data-value="linear">Linear (e.g., 2x + 3 &lt; 7)</li>
                 <li data-value="compound">Compound (e.g., -3 &lt; x + 2 &lt; 5)</li>
+                <li data-value="absolute">Absolute Value (e.g., |x - 2| &lt;= 4)</li>
                 <li data-value="quadratic">Quadratic (e.g., x^2 - 5x + 6 &gt; 0)</li>
-                <li data-value="rational">Rational (e.g., (x+1)/(x-3) &lt; 0)</li>
+                <li data-value="cubic">Cubic / Polynomial (e.g., x^3 - 4x &gt;= 0)</li>
             </ul>
         </div>
 
@@ -705,12 +817,15 @@
         <div class="examples">
             Click to load & solve:
             <span onclick="loadExample('linear','2x + 3 < 7')">2x + 3 &lt; 7</span>
+            <span onclick="loadExample('linear','3x - 5 >= 10')">3x - 5 &gt;= 10</span>
             <span onclick="loadExample('compound','-3 < x + 2 < 5')">-3 &lt; x+2 &lt; 5</span>
+            <span onclick="loadExample('absolute','|x - 2| <= 4')">|x - 2| &lt;= 4</span>
             <span onclick="loadExample('quadratic','x^2 - 5x + 6 > 0')">x² - 5x + 6 &gt; 0</span>
-            <span onclick="loadExample('rational','7/x > 2')">7/x &gt; 2</span>
+            <span onclick="loadExample('cubic','x^3 - 4x >= 0')">x³ - 4x &gt;= 0</span>
+            <span onclick="loadExample('cubic','x^3 - 6x^2 + 11x - 6 < 0')">x³ - 6x² + 11x - 6 &lt; 0</span>
         </div>
 
-        <h2 class="solve-tagline"><span class="script-letter">S</span><span class="caps-word">olve mo na, agi!</span></h2>
+        <h2 class="solve-tagline"><span class="script-letter">S</span><span class="caps-word">olve mo na agi!</span></h2>
 
         <button class="solve-btn" onclick="solve()">TUMPAK!</button>
     </div>
@@ -788,7 +903,6 @@ function syncTypeDisplay() {
     const match = typeOptions.querySelector(`li[data-value="${realType.value}"]`);
     if (match) typeTrigger.textContent = match.textContent;
 }
-
 function loadExample(type, expr) {
     document.getElementById('type').value = type;
     syncTypeDisplay();
@@ -801,16 +915,29 @@ function showError(m) {
     document.getElementById('errorBox').classList.remove('hidden');
     document.getElementById('resultArea').classList.add('hidden');
 }
-
 function clearError() {
     document.getElementById('errorBox').classList.add('hidden');
 }
 
 function norm(s) {
-    return s.trim().replace(/≤/g,'<=').replace(/≥/g,'>=').replace(/\^/g,'**').replace(/(\d)(x)/gi,'$1*$2').replace(/\s+/g,'').toLowerCase();
+    return s.trim()
+            .replace(/≤/g,'<=')
+            .replace(/≥/g,'>=')
+            .replace(/³/g,'^3')
+            .replace(/²/g,'^2')
+            .replace(/\^/g,'**')
+            .replace(/(\d)(x)/gi,'$1*$2')
+            .replace(/\s+/g,'')
+            .toLowerCase();
 }
 
-function pretty(s) { return s.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\*\*/g,'²').replace(/\*/g,''); }
+function pretty(s) { 
+    return s.replace(/</g,'&lt;')
+            .replace(/>/g,'&gt;')
+            .replace(/\*\*3/g,'³')
+            .replace(/\*\*2/g,'²')
+            .replace(/\*/g,''); 
+}
 
 function splitExpr(expr) {
     let e = norm(expr);
@@ -818,6 +945,7 @@ function splitExpr(expr) {
     return m ? {left:m[1], op:m[2], right:m[3]} : null;
 }
 
+// FORMATTERS
 function fmtInterval(ivs) {
     if (!ivs || ivs.length === 0) return '∅ (No Solution)';
     return ivs.map(iv => {
@@ -838,298 +966,390 @@ function fmtAnswer(ivs) {
     if (!ivs || ivs.length === 0) return 'No Solution';
     return ivs.map(iv => {
         let [a, b, flags] = iv;
-        if (a === -Infinity) return `x ${flags.ro ? '<' : '≤'} ${b}`;
-        if (b === Infinity) return `x ${flags.lo ? '>' : '≥'} ${a}`;
-        return `${a} ${flags.lo ? '<' : '≤'} x ${flags.ro ? '<' : '≤'} ${b}`;
+        let loOp = flags.lo ? '<' : '≤';
+        let roOp = flags.ro ? '<' : '≤';
+        
+        let fmtVal = v => Number.isInteger(v) ? v : parseFloat(v.toFixed(4));
+
+        if (a === -Infinity && b === Infinity) return 'All real numbers';
+        if (a === -Infinity) return `x ${roOp} ${fmtVal(b)}`;
+        if (b === Infinity) return `x ${flags.lo ? '>' : '≥'} ${fmtVal(a)}`;
+        return `${fmtVal(a)} ${loOp} x ${roOp} ${fmtVal(b)}`;
     }).join('   OR   ');
 }
 
-function parseP(s) {
-    s = norm(s).replace(/\*\*/g,'^');
-    let a=0, b=0;
-    s = s.replace(/(?=[+-])/g,'|').replace(/^\|/,'');
-    s.split('|').forEach(t=>{
-        if(!t)return;
-        if(t.includes('x')){
-            let c=t.replace('x','').replace('*','');
-            if(c===''||c==='+')a+=1;else if(c==='-')a+=-1;else a+=parseFloat(c);
-        }else{b+=parseFloat(t||0);}
+// ROBUST POLYNOMIAL PARSER
+function parsePoly(exprStr) {
+    let s = norm(exprStr).replace(/\*\*/g, '^');
+    let terms = s.replace(/-/g, '+-').split('+');
+    let coeffs = {};
+
+    terms.forEach(t => {
+        t = t.trim();
+        if (!t) return;
+        let deg = 0;
+        let coeff = 1;
+
+        if (t.includes('x')) {
+            let parts = t.split('x');
+            let cStr = parts[0].replace('*', '');
+            if (cStr === '' || cStr === '+') coeff = 1;
+            else if (cStr === '-') coeff = -1;
+            else coeff = parseFloat(cStr);
+
+            if (parts[1] && parts[1].startsWith('^')) {
+                deg = parseInt(parts[1].replace('^', ''), 10);
+            } else {
+                deg = 1;
+            }
+        } else {
+            deg = 0;
+            coeff = parseFloat(t);
+        }
+
+        if (isNaN(coeff)) coeff = 0;
+        coeffs[deg] = (coeffs[deg] || 0) + coeff;
     });
-    return {a,b};
+
+    return coeffs;
 }
 
-function solveLinear(left,op,right){
+function evalPoly(coeffs, x) {
+    let sum = 0;
+    for (let deg in coeffs) {
+        sum += coeffs[deg] * Math.pow(x, parseInt(deg, 10));
+    }
+    return sum;
+}
+
+// SOLVERS
+function parseP(s) {
+    let poly = parsePoly(s);
+    return { a: poly[1] || 0, b: poly[0] || 0 };
+}
+
+function solveLinear(left, op, right) {
     addStep(`Given: ${pretty(left)} ${op} ${pretty(right)}`);
-    let L=parseP(left), R=parseP(right);
-    let A=L.a-R.a, B=L.b-R.b;
+    let L = parseP(left), R = parseP(right);
+    let A = L.a - R.a, B = L.b - R.b;
     addStep(`Rearrange: ${A}x ${B>=0?'+':''}${B} ${op} 0`);
 
-    if(A===0){
-        let ok=(op==='<'&&B<0)||(op==='<='&&B<=0)||(op==='>'&&B>0)||(op==='>='&&B>=0);
-        if(ok){
+    if (A === 0) {
+        let ok = (op==='<'&&B<0)||(op==='<='&&B<=0)||(op==='>'&&B>0)||(op==='>='&&B>=0);
+        if (ok) {
             addStep(`Simplifies to true for all x → All real numbers`);
-            return [[-Infinity,Infinity,{lo:true,ro:true}]];
-        }else{
+            return [[-Infinity, Infinity, {lo:true, ro:true}]];
+        } else {
             addStep(`Never true → No solution`);
             return [];
         }
     }
 
-    let flip=A<0;
-    if(flip){
-        A=-A;B=-B;op={'<':'>','>':'<','<=':'>=',">=":'<='}[op];
+    let flip = A < 0;
+    if (flip) {
+        A = -A; B = -B; 
+        op = {'<':'>', '>':'<', '<=':'>=', '>=':'<='}[op];
         addStep(`Divide by negative → REVERSE sign: ${op}`);
-    }else{
+    } else {
         addStep(`Divide by ${A} → sign stays ${op}`);
     }
-    let val=-B/A;
+    let val = -B / A;
     addStep(`x ${op} ${val}`);
 
-    if(op==='<') return [[-Infinity,val,{lo:true,ro:true}]];
-    if(op==='<=') return [[-Infinity,val,{lo:true,ro:false}]];
-    if(op==='>') return [[val,Infinity,{lo:true,ro:true}]];
-    if(op==='>=') return [[val,Infinity,{lo:false,ro:true}]];
+    if (op === '<') return [[-Infinity, val, {lo:true, ro:true}]];
+    if (op === '<=') return [[-Infinity, val, {lo:true, ro:false}]];
+    if (op === '>') return [[val, Infinity, {lo:true, ro:true}]];
+    if (op === '>=') return [[val, Infinity, {lo:false, ro:true}]];
     return [];
 }
 
-function solveCompound(expr){
-    let e=norm(expr);
-    let ops=e.match(/<=|>=|<|>/g);
-    let parts=e.split(/<=|>=|<|>/);
-    if(!ops||ops.length!==2||parts.length!==3)return null;
-    let Lv=parseFloat(parts[0]),mid=parts[1],Rv=parseFloat(parts[2]);
-    let op1=ops[0],op2=ops[1];
+function solveCompound(expr) {
+    let e = norm(expr);
+    let ops = e.match(/<=|>=|<|>/g);
+    let parts = e.split(/<=|>=|<|>/);
+    if (!ops || ops.length !== 2 || parts.length !== 3) return null;
+    let Lv = parseFloat(parts[0]), mid = parts[1], Rv = parseFloat(parts[2]);
+    let op1 = ops[0], op2 = ops[1];
 
     addStep(`Compound: both inequalities must be true`);
     addStep(`1) ${pretty(mid)} ${op2} ${Rv}`);
     addStep(`2) ${Lv} ${op1} ${pretty(mid)}`);
 
-    let s1=solveLinear(mid,op2,Rv+''); clearSteps();
-    let s2=solveLinear(Lv+'',op1,mid); clearSteps();
+    let s1 = solveLinear(mid, op2, Rv+''); clearSteps();
+    let s2 = solveLinear(Lv+'', op1, mid); clearSteps();
 
-    let a=Math.max(s1[0][0], s2[0][0]);
-    let b=Math.min(s1[0][1], s2[0][1]);
+    let a = Math.max(s1[0][0], s2[0][0]);
+    let b = Math.min(s1[0][1], s2[0][1]);
     addStep(`Overlap: ${a} ${op1} x ${op2} ${b}`);
-    if(a>b){addStep(`No overlap → No solution`);return [];}
-    return [[a,b,{lo:op1==='<',ro:op2==='<'}]];
+    if (a > b) { addStep(`No overlap → No solution`); return []; }
+    return [[a, b, {lo: op1==='<', ro: op2==='<'}]];
 }
 
-function solveQuad(left,op,right){
-    clearSteps();
-    addStep(`Given: ${pretty(left)} ${op} ${pretty(right)}`);
-    addStep(`Bring all terms to left: ${pretty(left)} - (${pretty(right)}) ${op} 0`);
+function solveAbs(left, op, right) {
+    let inner = left.replace(/\|/g, ''); 
+    let R = parseFloat(right);
+    addStep(`|${pretty(inner)}| ${op} ${R}`);
 
-    let e=`((${left})-(${right}))`;
-    let A=0,B=0,C=0;
-    let x2=e.match(/([+-]?[\d.]*)?\*?x\*\*2/g)||e.match(/([+-]?[\d.]*)?\*?x\^2/g);
-    if(x2)x2.forEach(t=>{let c=t.replace(/[*x^2]/g,'').trim();A+=c===''||c==='+'?1:c==='-'?-1:parseFloat(c);});
-    let x1=e.match(/([+-]?[\d.]*)?\*?x(?![*x^])/g);
-    if(x1)x1.forEach(t=>{let c=t.replace(/[*x]/g,'').trim();B+=c===''||c==='+'?1:c==='-'?-1:parseFloat(c);});
-    let nums=e.match(/[+-]\s*[\d.]+\s*(?![x*])/g);
-    if(nums)nums.forEach(t=>C+=parseFloat(t));
-
-    addStep(`a=${A}, b=${B}, c=${C}`);
-    let disc=B*B-4*A*C;
-    addStep(`Discriminant = b²-4ac = ${disc}`);
-
-    let roots=[];
-    if(disc>0){
-        let r1=(-B-Math.sqrt(disc))/(2*A);
-        let r2=(-B+Math.sqrt(disc))/(2*A);
-        roots=[r1,r2].sort((x,y)=>x-y);
-        addStep(`Roots: ${roots[0].toFixed(4)}, ${roots[1].toFixed(4)}`);
-    }else if(disc===0){
-        roots=[-B/(2*A)];
-        addStep(`One root: ${roots[0].toFixed(4)}`);
-    }else{
-        addStep(`No real roots → parabola always ${A>0?'positive':'negative'}`);
-        let always=(A>0&&(op==='>'||op==='>='))||(A<0&&(op==='<'||op==='<='));
-        return always?[[-Infinity,Infinity,{lo:true,ro:true}]]:[];
+    if (R < 0) {
+        if (op==='<' || op==='<=') { addStep(`|value| ≥ 0, cannot be < negative → No solution`); return []; }
+        else { addStep(`Always true → All real numbers`); return [[-Infinity, Infinity, {lo:true, ro:true}]]; }
     }
 
-    let wantPos=(A>0&&(op==='>'||op==='>='))||(A<0&&(op==='<'||op==='<='));
-    let strict=op==='<'||op==='>';
-    addStep(`Parabola ${A>0?'opens UP':'opens DOWN'}. Want ${wantPos?'positive':'negative'}.`);
-
-    if(roots.length===1){
-        let r=roots[0];
-        if(wantPos){
-            addStep(`Solution: all x except x=${r}`);
-            return [[-Infinity,r,{lo:true,ro:strict}],[r,Infinity,{lo:strict,ro:true}]];
-        }else{addStep(`No solution`);return [];}
-    }
-
-    let [r1,r2]=roots;
-    if(wantPos){
-        addStep(`Positive OUTSIDE roots: x < ${r1} OR x > ${r2}`);
-        return [[-Infinity,r1,{lo:true,ro:strict}],[r2,Infinity,{lo:strict,ro:true}]];
-    }else{
-        addStep(`Negative BETWEEN roots: ${r1} < x < ${r2}`);
-        return [[r1,r2,{lo:strict,ro:strict}]];
-    }
-}
-
-function solveRational(left, op, right) {
-    clearSteps();
-    addStep(`Given: ${pretty(left)} ${op} ${pretty(right)}`);
-    addStep(`Move terms to one side: ${pretty(left)} - (${pretty(right)}) ${op} 0`);
-
-    // Basic Rational Parser for common linear/linear forms (e.g., 7/x > 2 or (x+1)/(x-3) < 0)
-    let numA = 0, numB = 0, denA = 0, denB = 0;
-    
-    // Check form num/den op right
-    let fracMatch = left.match(/^\(?([^/]+)\)?\/\(?([^/]+)\)?$/);
-    if (fracMatch) {
-        let numP = parseP(fracMatch[1]);
-        let denP = parseP(fracMatch[2]);
-        let rVal = parseFloat(right);
-
-        // (numA*x + numB)/(denA*x + denB) - rVal > 0
-        // Combined Numerator = (numA - rVal*denA)x + (numB - rVal*denB)
-        numA = numP.a - rVal * denP.a;
-        numB = numP.b - rVal * denP.b;
-        denA = denP.a;
-        denB = denP.b;
+    if (op==='<' || op==='<=') {
+        addStep(`|A| ${op} R  →  -R ${op} A ${op} R`);
+        return solveCompound(`-${R}${op}${inner}${op}${R}`);
     } else {
-        throw new Error("Rational solver currently supports (a*x+b)/(c*x+d) forms.");
+        addStep(`|A| ${op} R  →  A ${op} R   OR   A ${op} -R`);
+        let s1 = solveLinear(inner, op, R+''); clearSteps();
+        let s2 = solveLinear(inner, op, (-R)+''); clearSteps();
+        addStep(`Combine both solutions`);
+        return s1.concat(s2);
+    }
+}
+
+// CUBIC & GENERAL POLYNOMIAL SOLVER (HANDLES QUADRATIC, CUBIC, ETC.)
+function solvePoly(left, op, right) {
+    clearSteps();
+    addStep(`Given: ${pretty(left)} ${op} ${pretty(right)}`);
+    addStep(`Bring all terms to left side: (${pretty(left)}) - (${pretty(right)}) ${op} 0`);
+
+    let leftCoeffs = parsePoly(left);
+    let rightCoeffs = parsePoly(right);
+    let coeffs = {};
+
+    let maxDeg = 0;
+    for (let deg in leftCoeffs) {
+        let d = parseInt(deg, 10);
+        coeffs[d] = (coeffs[d] || 0) + leftCoeffs[deg];
+        if (d > maxDeg) maxDeg = d;
+    }
+    for (let deg in rightCoeffs) {
+        let d = parseInt(deg, 10);
+        coeffs[d] = (coeffs[d] || 0) - rightCoeffs[deg];
+        if (d > maxDeg) maxDeg = d;
     }
 
-    let numZero = numA !== 0 ? -numB / numA : null;
-    let denZero = denA !== 0 ? -denB / denA : null;
-
-    addStep(`Critical points where expression is 0 or undefined:`);
-    if (numZero !== null) addStep(`Numerator root: x = ${numZero}`);
-    if (denZero !== null) addStep(`Denominator root (excluded point): x = ${denZero}`);
-
-    let crits = [];
-    if (numZero !== null) crits.push(numZero);
-    if (denZero !== null) crits.push(denZero);
-    crits.sort((a,b) => a - b);
-
-    // Test intervals
-    let testPts = [];
-    testPts.push(crits[0] - 2);
-    for (let i = 0; i < crits.length - 1; i++) {
-        testPts.push((crits[i] + crits[i+1]) / 2);
+    // Print combined polynomial expression
+    let polyTerms = [];
+    for (let d = maxDeg; d >= 0; d--) {
+        let c = coeffs[d] || 0;
+        if (c === 0) continue;
+        let cStr = c > 0 && polyTerms.length > 0 ? `+ ${c}` : `${c}`;
+        if (d === 1) polyTerms.push(`${cStr}x`);
+        else if (d === 0) polyTerms.push(`${cStr}`);
+        else polyTerms.push(`${cStr}x^${d}`);
     }
-    testPts.push(crits[crits.length - 1] + 2);
+    let combinedStr = polyTerms.length > 0 ? polyTerms.join(' ') : '0';
+    addStep(`Standard form: ${combinedStr} ${op} 0`);
 
-    function evalRational(x) {
-        let N = numA * x + numB;
-        let D = denA * x + denB;
-        return N / D;
+    // FIND ROOTS
+    let roots = [];
+    if (maxDeg === 2) {
+        let a = coeffs[2] || 0, b = coeffs[1] || 0, c = coeffs[0] || 0;
+        addStep(`Quadratic Coefficients: a = ${a}, b = ${b}, c = ${c}`);
+        let disc = b * b - 4 * a * c;
+        addStep(`Discriminant (b² - 4ac) = ${disc}`);
+
+        if (disc > 0) {
+            let r1 = (-b - Math.sqrt(disc)) / (2 * a);
+            let r2 = (-b + Math.sqrt(disc)) / (2 * a);
+            roots = [r1, r2];
+        } else if (disc === 0) {
+            roots = [-b / (2 * a)];
+        }
+    } else if (maxDeg === 3) {
+        // Cubic Solver (Cardano's / Rational Root + Synthetic Division)
+        let a = coeffs[3] || 0, b = coeffs[2] || 0, c = coeffs[1] || 0, d = coeffs[0] || 0;
+        addStep(`Cubic Coefficients: a = ${a}, b = ${b}, c = ${c}, d = ${d}`);
+
+        // Rational Root Candidate Search
+        let foundRoots = [];
+        for (let p = -50; p <= 50; p++) {
+            for (let q = 1; q <= 10; q++) {
+                let candidate = p / q;
+                if (Math.abs(evalPoly(coeffs, candidate)) < 1e-7) {
+                    if (!foundRoots.some(r => Math.abs(r - candidate) < 1e-4)) {
+                        foundRoots.push(candidate);
+                    }
+                }
+            }
+        }
+        roots = foundRoots;
+    } else if (maxDeg === 1) {
+        return solveLinear(left, op, right);
+    } else {
+        throw new Error("Degrees higher than cubic (x³) are not supported.");
     }
 
-    let validIntervals = [];
-    let bounds = [-Infinity, ...crits, Infinity];
+    // Sort unique roots
+    roots = roots.sort((x, y) => x - y);
+    // Remove duplicates due to floating point inaccuracies
+    let uniqueRoots = [];
+    roots.forEach(r => {
+        if (!uniqueRoots.some(u => Math.abs(u - r) < 1e-4)) {
+            uniqueRoots.push(r);
+        }
+    });
 
-    for (let i = 0; i < testPts.length; i++) {
-        let val = evalRational(testPts[i]);
-        let ok = false;
-        if (op === '<' && val < 0) ok = true;
-        if (op === '<=' && val <= 0) ok = true;
-        if (op === '>' && val > 0) ok = true;
-        if (op === '>=' && val >= 0) ok = true;
+    if (uniqueRoots.length > 0) {
+        addStep(`Critical points (roots): ${uniqueRoots.map(r => Number.isInteger(r) ? r : r.toFixed(4)).join(', ')}`);
+    } else {
+        addStep(`No real critical points (roots) found.`);
+    }
 
-        let a = bounds[i];
-        let b = bounds[i+1];
+    // INTERVAL TESTING (SIGN CHART)
+    let boundaries = [-Infinity, ...uniqueRoots, Infinity];
+    let intervals = [];
+    let strict = (op === '<' || op === '>');
 
-        if (ok) {
-            let loExcl = (a === -Infinity || a === denZero || op === '<' || op === '>');
-            let roExcl = (b === Infinity || b === denZero || op === '<' || op === '>');
-            validIntervals.push([a, b, { lo: loExcl, ro: roExcl }]);
-            addStep(`Interval (${a}, ${b}): TRUE`);
-        } else {
-            addStep(`Interval (${a}, ${b}): FALSE`);
+    addStep(`Testing intervals (Sign Chart):`);
+
+    for (let i = 0; i < boundaries.length - 1; i++) {
+        let low = boundaries[i];
+        let high = boundaries[i + 1];
+        
+        // Pick a test point inside the interval
+        let testPt;
+        if (low === -Infinity && high === Infinity) testPt = 0;
+        else if (low === -Infinity) testPt = high - 1;
+        else if (high === Infinity) testPt = low + 1;
+        else testPt = (low + high) / 2;
+
+        let val = evalPoly(coeffs, testPt);
+        let satisfies = false;
+
+        if (op === '<') satisfies = val < 0;
+        else if (op === '<=') satisfies = val <= 0;
+        else if (op === '>') satisfies = val > 0;
+        else if (op === '>=') satisfies = val >= 0;
+
+        let lowStr = low === -Infinity ? '-∞' : (Number.isInteger(low) ? low : low.toFixed(2));
+        let highStr = high === Infinity ? '∞' : (Number.isInteger(high) ? high : high.toFixed(2));
+
+        addStep(`Interval (${lowStr}, ${highStr}): Test x = ${testPt.toFixed(2)} → Value = ${val.toFixed(2)} → ${satisfies ? 'VALID ✅' : 'INVALID ❌'}`);
+
+        if (satisfies) {
+            intervals.push([low, high, { lo: strict || low === -Infinity, ro: strict || high === Infinity }]);
         }
     }
 
-    return validIntervals;
-}
+    // MERGE ADJACENT INCLUSIONS FOR INCLUSIVE INEQUALITIES (<=, >=)
+    if (!strict && intervals.length > 1) {
+        let merged = [];
+        let curr = intervals[0];
 
-// === DRAW NUMBER LINE ===
-function drawLine(ivs){
-    let c=document.getElementById('lineCanvas'), ctx=c.getContext('2d');
-    let W=c.width, H=c.height, cy=80, pad=55;
-
-    let pts=[]; ivs.forEach(i=>{pts.push(i[0],i[1]);});
-    pts=pts.filter(isFinite);
-    let minP=pts.length?Math.floor(Math.min(...pts)-1):-5;
-    let maxP=pts.length?Math.ceil(Math.max(...pts)+1):5;
-    if(maxP===minP){minP-=2;maxP+=2;}
-    let R=maxP-minP;
-    function tx(v){return pad+(v-minP)*(W-2*pad)/R;}
-
-    ctx.clearRect(0,0,W,H);
-
-    ctx.lineWidth=2; ctx.strokeStyle='#333';
-    ctx.beginPath(); ctx.moveTo(pad,cy); ctx.lineTo(W-pad,cy); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(W-pad,cy); ctx.lineTo(W-pad-10,cy-7); ctx.lineTo(W-pad-10,cy+7); ctx.closePath(); ctx.fillStyle='#333'; ctx.fill();
-
-    ctx.font='13px Segoe UI'; ctx.textAlign='center';
-    for(let v=minP;v<=maxP;v++){
-        let x=tx(v);
-        ctx.beginPath(); ctx.moveTo(x,cy-10); ctx.lineTo(x,cy+10);
-        ctx.strokeStyle='#AAA'; ctx.lineWidth=2; ctx.stroke();
-        ctx.fillStyle='#333'; ctx.fillText(v+'',x,cy+32);
+        for (let i = 1; i < intervals.length; i++) {
+            let next = intervals[i];
+            // If boundaries touch
+            if (Math.abs(curr[1] - next[0]) < 1e-4) {
+                curr = [curr[0], next[1], { lo: curr[2].lo, ro: next[2].ro }];
+            } else {
+                merged.push(curr);
+                curr = next;
+            }
+        }
+        merged.push(curr);
+        intervals = merged;
     }
 
-    ivs.forEach(iv=>{
-        let [a,b,flags]=iv;
-        let loExcl=flags.lo;
-        let roExcl=flags.ro;
+    return intervals;
+}
 
-        let xa=a===-Infinity?pad:tx(a);
-        let xb=b===Infinity?W-pad:tx(b);
+// DRAW NUMBER LINE GRAPH
+function drawLine(ivs) {
+    let c = document.getElementById('lineCanvas'), ctx = c.getContext('2d');
+    let W = c.width, H = c.height, cy = 80, pad = 55;
 
-        ctx.strokeStyle='#AB47BC'; ctx.lineWidth=6; ctx.lineCap='round';
-        ctx.beginPath(); ctx.moveTo(xa,cy); ctx.lineTo(xb,cy); ctx.stroke();
+    let pts = []; 
+    ivs.forEach(i => { pts.push(i[0], i[1]); });
+    pts = pts.filter(isFinite);
 
-        ctx.lineWidth=2;
-        [[a,loExcl,xa],[b,roExcl,xb]].forEach(([v,excl,px])=>{
-            if(!isFinite(v))return;
-            ctx.beginPath(); ctx.arc(px,cy,7,0,Math.PI*2);
-            ctx.fillStyle=excl?'#FFF':'#AB47BC'; ctx.fill();
-            ctx.strokeStyle='#AB47BC'; ctx.stroke();
+    let minP = pts.length ? Math.floor(Math.min(...pts) - 1) : -5;
+    let maxP = pts.length ? Math.ceil(Math.max(...pts) + 1) : 5;
+    if (maxP === minP) { minP -= 2; maxP += 2; }
+    let R = maxP - minP;
+
+    function tx(v) { return pad + (v - minP) * (W - 2 * pad) / R; }
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Baseline Number Line Axis
+    ctx.lineWidth = 2; ctx.strokeStyle = '#333';
+    ctx.beginPath(); ctx.moveTo(pad, cy); ctx.lineTo(W - pad, cy); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(W - pad, cy); ctx.lineTo(W - pad - 10, cy - 7); ctx.lineTo(W - pad - 10, cy + 7); ctx.closePath(); ctx.fillStyle = '#333'; ctx.fill();
+
+    // Ticks & Labels
+    ctx.font = '13px Segoe UI'; ctx.textAlign = 'center';
+    let step = Math.ceil(R / 12) || 1;
+    for (let v = minP; v <= maxP; v += step) {
+        let x = tx(v);
+        ctx.beginPath(); ctx.moveTo(x, cy - 10); ctx.lineTo(x, cy + 10);
+        ctx.strokeStyle = '#AAA'; ctx.lineWidth = 2; ctx.stroke();
+        ctx.fillStyle = '#333'; ctx.fillText(v + '', x, cy + 32);
+    }
+
+    // Intervals Highlight
+    ivs.forEach(iv => {
+        let [a, b, flags] = iv;
+        let loExcl = flags.lo;
+        let roExcl = flags.ro;
+
+        let xa = a === -Infinity ? pad : tx(a);
+        let xb = b === Infinity ? W - pad : tx(b);
+
+        ctx.strokeStyle = '#AB47BC'; ctx.lineWidth = 6; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(xa, cy); ctx.lineTo(xb, cy); ctx.stroke();
+
+        ctx.lineWidth = 2;
+        [[a, loExcl, xa], [b, roExcl, xb]].forEach(([v, excl, px]) => {
+            if (!isFinite(v)) return;
+            ctx.beginPath(); ctx.arc(px, cy, 7, 0, Math.PI * 2);
+            ctx.fillStyle = excl ? '#FFF' : '#AB47BC'; ctx.fill();
+            ctx.strokeStyle = '#AB47BC'; ctx.stroke();
         });
 
-        if(a===-Infinity){
-            ctx.beginPath(); ctx.moveTo(pad+14,cy-8); ctx.lineTo(pad,cy); ctx.lineTo(pad+14,cy+8);
-            ctx.strokeStyle='#AB47BC'; ctx.lineWidth=4; ctx.stroke();
+        if (a === -Infinity) {
+            ctx.beginPath(); ctx.moveTo(pad + 14, cy - 8); ctx.lineTo(pad, cy); ctx.lineTo(pad + 14, cy + 8);
+            ctx.strokeStyle = '#AB47BC'; ctx.lineWidth = 4; ctx.stroke();
         }
-        if(b===Infinity){
-            ctx.beginPath(); ctx.moveTo(W-pad-14,cy-8); ctx.lineTo(W-pad,cy); ctx.lineTo(W-pad-14,cy+8);
-            ctx.strokeStyle='#AB47BC'; ctx.lineWidth=4; ctx.stroke();
+        if (b === Infinity) {
+            ctx.beginPath(); ctx.moveTo(W - pad - 14, cy - 8); ctx.lineTo(W - pad, cy); ctx.lineTo(W - pad + 14, cy + 8);
+            ctx.strokeStyle = '#AB47BC'; ctx.lineWidth = 4; ctx.stroke();
         }
     });
 }
 
-function solve(){
+// MAIN SOLVE FUNCTION
+function solve() {
     clearError(); clearSteps();
-    let type=document.getElementById('type').value;
-    let expr=document.getElementById('input').value.trim();
-    if(!expr)return showError('Enter an inequality first.');
+    let type = document.getElementById('type').value;
+    let expr = document.getElementById('input').value.trim();
+    if (!expr) return showError('Enter an inequality first.');
 
     let ivs;
-    try{
-        if(type==='compound')ivs=solveCompound(expr);
-        else{
-            let p=splitExpr(expr);
-            if(!p)return showError('Use format: 2x + 3 < 7');
-            if(type==='linear')ivs=solveLinear(p.left,p.op,p.right);
-            else if(type==='quadratic')ivs=solveQuad(p.left,p.op,p.right);
-            else if(type==='rational')ivs=solveRational(p.left,p.op,p.right);
+    try {
+        if (type === 'compound') {
+            ivs = solveCompound(expr);
+        } else {
+            let p = splitExpr(expr);
+            if (!p) return showError('Use valid format, e.g.: x^3 - 4x >= 0');
+
+            if (type === 'linear') ivs = solveLinear(p.left, p.op, p.right);
+            else if (type === 'absolute') ivs = solveAbs(p.left, p.op, p.right);
+            else if (type === 'quadratic' || type === 'cubic') ivs = solvePoly(p.left, p.op, p.right);
         }
-    }catch(e){return showError('Error: '+e.message);}
+    } catch (e) {
+        return showError('Error: ' + e.message);
+    }
 
-    if(!ivs)return showError('No solution. Check format.');
+    if (!ivs) return showError('No solution. Check format.');
 
-    document.getElementById('origText').textContent=expr;
-    document.getElementById('stepsText').innerHTML=steps.map((s,i)=>`<div><span class="step-num">${i+1})</span> ${s}</div>`).join('');
-    document.getElementById('solText').textContent=fmtAnswer(ivs);
-    document.getElementById('intText').textContent=fmtInterval(ivs);
+    document.getElementById('origText').textContent = expr;
+    document.getElementById('stepsText').innerHTML = steps.map((s, i) => `<div><span class="step-num">${i + 1})</span> ${s}</div>`).join('');
+    document.getElementById('solText').textContent = fmtAnswer(ivs);
+    document.getElementById('intText').textContent = fmtInterval(ivs);
     document.getElementById('resultArea').classList.remove('hidden');
-    setTimeout(()=>drawLine(ivs),30);
+    setTimeout(() => drawLine(ivs), 30);
 }
 </script>
 </body>
